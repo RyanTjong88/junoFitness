@@ -29,6 +29,7 @@ html {
             box-shadow: #d8910d 10px 10px, #2A150D 20px 20px;
             width: 100%;
             margin: 50px 0;
+            cursor: crosshair;
 
             &:hover,
             &:focus {
@@ -43,7 +44,9 @@ h1, h2, h3 {
     padding: 0;
 }
 
-.start {
+.start,
+.up,
+input[type="submit"] {
     font: 400 2rem 'Anton', sans-serif; 
     height: 40px;
     width: 300px;
@@ -54,12 +57,12 @@ h1, h2, h3 {
     color: #2A150D;
     box-shadow: rgba(42, 21, 13, 0.5) 5px 5px;
     transition: height 1s, width 1s, font-size 1.5s;
+    letter-spacing: 1.8px;
 
     &:hover,
     &:focus {
         height: 50px;
         width: 320px;
         font-size: 2.5rem;
-
     }
 }

@@ -6,7 +6,7 @@ gym.scroll = () => {
     // scroll down/up code taken from Ahmad Yousef on codepen
     $(".start").click(function() {
         $('html, body').animate({
-            scrollTop: $(".main").offset().top
+            scrollTop: $("h3").offset().top
         }, 1500);
     });
 
@@ -16,7 +16,7 @@ gym.scroll = () => {
         }, 1500);
     });
 
-    $(".up.start").click(function() {
+    $(".up").click(function() {
         $('html, body').animate({
             scrollTop: $("header").offset().top
         }, 1800);

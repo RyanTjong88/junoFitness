@@ -1,3 +1,7 @@
+.mainSecOne {
+    margin: 50px 0;
+}
+
 .imageContainer {
     width: 50%;
 }
@@ -22,7 +26,8 @@
             margin: 10px;
             
             label {
-                font: 400 2.5rem 'Anton', sans-serif; 
+                font: 400 2.5rem 'Anton', sans-serif;
+                letter-spacing: 2px;
             }
             
             input[type="radio"] {
@@ -30,12 +35,17 @@
             }
         }
     }
+
+    input[type="submit"] {
+        background-color: #ffb43b;
+        box-shadow: rgba(42, 21, 13, 0.8) 5px 5px;    
+    }
 }
 
 .resultSection {
     background-color: #ffb43b;
 
-    .up.start {
-        margin: 30px 0;
+    .up{
+        margin-bottom: 50px;
     }
 }
