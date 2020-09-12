@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juno🏋️‍♂️🏋️‍♀️Fitness</title>
+
+    <!-- font awesome -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Knewave&display=swap" rel="stylesheet"> 
+
+    <!-- headings
+    font-family: 'Knewave', cursive; -->
+    <!-- body text
+    font-family: 'Anton', sans-serif; -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <section class="wrapper headerContainer">
+            <div class="contentContainer">
+                <h1>it's go time!</h1>
+                <h2>choose from the selections below to build your workout</h2>
+                <div>
+                    <button class="start">let's get started</button>
+                </div>
+            </div>
+            <div class="imageContainer">
+                <img src="assets/projectThreeHeader.jpg" alt="squat rack by the window overlooking mountains">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="wrapper mainContainer">
+            <div class="imageContainer">
+                <img class="main" src="assets/mainOne.jpg" alt="woman using weighted/battle ropes during workout">
+            </div>
+            <div class="contentContainer">
+                <h3>
+                    What muscle are we hitting?
+                </h3>
+                <fieldset>
+                    <div>
+                        <label for="back">Back</label>
+                        <input type="radio" name="muscle" value="back" id="back">
+                    </div>
+                    <div>
+                        <label for="chest">Chest</label>
+                        <input type="radio" name="muscle" value="chest" id="chest">
+                    </div>
+                    <div>
+                        <label for="arms">Arms</label>
+                        <input type="radio" name="muscle" value="arms" id="arms">
+                    </div>
+                    <div>    
+                        <label for="legs">Legs</label>
+                        <input type="radio" name="muscle" value="legs" id="legs">
+                    </div>
+                    <div>
+                        <label for="shoulders">Shoulders</label>
+                        <input type="radio" name="muscle" value="shoulders" checked="true" id="shoulders"> 
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+
+        <section class="wrapper mainContainer">
+            <div class="contentContainer">
+                <h3>
+                    What is your goal?
+                </h3>
+                <fieldset>
+                    <div>    
+                        <label for="tone">Tone/Endurance</label>
+                        <input type="radio" name="goal" value="tone" id="tone">
+                    </div>
+                    <div>  
+                        <label for="mass">Mass/Size</label>
+                        <input type="radio" name="goal" value="mass" id="mass">
+                    </div>
+                    <div>
+                        <label for="strength">Power/Strength</label>
+                        <input type="radio" name="goal" value="strength" checked="true" id="strength"> 
+                    </div>
+                </fieldset>
+                <!-- Submit Input -->
+                <div>
+                    <input type="submit" value="Get me a workout!">
+                </div>
+            </div>
+
+            <div class="imageContainer">
+                <img src="assets/mainTwo.jpg" alt="man getting ready to lift weights/dead lift">
+            </div>  
+        </section>
+
+        <section class="resultSection">
+            <div class="wrapper results mainContainer">
+                <div class="imageContainer">
+                    <img src="assets/mainThree.jpg" alt="">
+                </div>
+                <div class="contentContainer">
+                    
+                </div >
+                <button class="up start">Back to Top</button>
+            </div>
+        </section>
+    </main>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

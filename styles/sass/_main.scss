@@ -1,0 +1,41 @@
+.imageContainer {
+    width: 50%;
+}
+
+.contentContainer {
+    width: 50%;
+
+    h3 {
+        font: 400 4rem 'Knewave', cursive;
+        text-shadow: #ffb43b 5px 5px; 
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: left;
+        border: solid #ffb43b;
+        border-width: 0 0 7px 7px;
+
+        div {
+            margin: 10px;
+            
+            label {
+                font: 400 2.5rem 'Anton', sans-serif; 
+            }
+            
+            input[type="radio"] {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.resultSection {
+    background-color: #ffb43b;
+
+    .up.start {
+        margin: 30px 0;
+    }
+}
