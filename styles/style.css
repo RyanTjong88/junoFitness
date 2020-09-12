@@ -246,7 +246,8 @@ html {
 }
 
 .headerContainer,
-.mainContainer {
+.mainContainer,
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,7 +259,8 @@ html {
 }
 
 .headerContainer .contentContainer,
-.mainContainer .contentContainer {
+.mainContainer .contentContainer,
+form .contentContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,12 +275,14 @@ html {
 }
 
 .headerContainer .imageContainer,
-.mainContainer .imageContainer {
+.mainContainer .imageContainer,
+form .imageContainer {
   width: 38%;
 }
 
 .headerContainer .imageContainer img,
-.mainContainer .imageContainer img {
+.mainContainer .imageContainer img,
+form .imageContainer img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: .3s ease-in-out;
@@ -292,7 +296,9 @@ html {
 
 .headerContainer .imageContainer img:hover, .headerContainer .imageContainer img:focus,
 .mainContainer .imageContainer img:hover,
-.mainContainer .imageContainer img:focus {
+.mainContainer .imageContainer img:focus,
+form .imageContainer img:hover,
+form .imageContainer img:focus {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
@@ -408,3 +414,7 @@ header {
 .resultSection .up {
   margin-bottom: 50px;
 }
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
