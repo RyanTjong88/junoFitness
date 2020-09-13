@@ -8,108 +8,154 @@ gym.workouts = {
         {
             muscleGroup: 'back',
             aim: 'tone',
+            sets: '(4 - 5 Sets)',
+            reps: '(10 - 15 Reps)',
         },
         {
             muscleGroup: 'back',
             aim: 'mass',
+            sets: '(3 - 4 Sets)',
+            reps: '(5 - 7 Reps)'
         },
         {
             muscleGroup: 'back',
             aim: 'strength',
+            sets: '(3 - 4 Sets)',
+            reps: '(10 - 15 Reps)',
         },
-
+        {
+            exercises: [
+                {
+                    exerciseOne: 'Deadlifts',
+                    exerciseTwo: 'Bent Over Rows',
+                    exerciseThree: 'Lat Pulldowns',
+                }
+            ]
+        },
     ],
-    
+
     chest: [
         {
             muscleGroup: 'chest',
             aim: 'tone',
+            sets: '(4 - 5 Sets)',
+            reps: '(10 - 15 Reps)',
         },
         {
             muscleGroup: 'chest',
             aim: 'mass',
+            sets: '(3 - 4 Sets)',
+            reps: '(5 - 7 Reps)'
         },
         {
             muscleGroup: 'chest',
             aim: 'strength',
+            sets: '(3 - 4 Sets)',
+            reps: '(10 - 15 Reps)',
         },
-
+        {
+            exercises: [
+                {
+                    exerciseOne: 'Flat Bench',
+                    exerciseTwo: 'Cable Flys',
+                    exerciseThree: 'Decline Bench',
+                }
+            ]
+        },
     ],
-   
+    
     arms: [
         {
             muscleGroup: 'arms',
             aim: 'tone',
+            sets: '(4 - 5 Sets)',
+            reps: '(10 - 15 Reps)',
         },
         {
             muscleGroup: 'arms',
             aim: 'mass',
+            sets: '(3 - 4 Sets)',
+            reps: '(5 - 7 Reps)'
         },
         {
             muscleGroup: 'arms',
             aim: 'strength',
+            sets: '(3 - 4 Sets)',
+            reps: '(10 - 15 Reps)',
         },
-
+        {
+            exercises: [
+                {
+                    exerciseOne: 'Bicep Curls',
+                    exerciseTwo: 'Skull Crushers',
+                    exerciseThree: 'EZ Bar Curls',
+                }
+            ]
+        },
     ],
     
-
     legs: [
         {
             muscleGroup: 'legs',
             aim: 'tone',
+            sets: '(4 - 5 Sets)',
+            reps: '(10 - 15 Reps)',
         },
         {
             muscleGroup: 'legs',
             aim: 'mass',
+            sets: '(3 - 4 Sets)',
+            reps: '(5 - 7 Reps)'
         },
         {
             muscleGroup: 'legs',
             aim: 'strength',
+            sets: '(3 - 4 Sets)',
+            reps: '(10 - 15 Reps)',
         },
-
+        {
+            exercises: [
+                {
+                    exerciseOne: 'Squats',
+                    exerciseTwo: 'Lunges',
+                    exerciseThree: 'Leg Curls',
+                }
+            ]
+        },
     ],
     
-
     shoulders: [
         {
             muscleGroup: 'shoulders',
             aim: 'tone',
+            sets: '(4 - 5 Sets)',
+            reps: '(10 - 15 Reps)',
         },
         {
             muscleGroup: 'shoulders',
             aim: 'mass',
+            sets: '(3 - 4 Sets)',
+            reps: '(5 - 7 Reps)'
         },
         {
             muscleGroup: 'shoulders',
             aim: 'strength',
+            sets: '(3 - 4 Sets)',
+            reps: '(10 - 15 Reps)',
         },
-
-    ]
-    
-    
+        {
+            exercises: [
+                {
+                    exerciseOne: 'Shoulder Press',
+                    exerciseTwo: 'Lateral Raises',
+                    exerciseThree: 'Rear Delt Flys',
+                }
+            ]
+        },
+    ]    
 };
 
 console.log(gym.workouts);
-
-gym.routine = {
-
-    tone: {
-        sets: '(4 -5 Sets)',
-        reps: '(10 - 15 Reps)'
-    },
-
-    mass: {
-        sets: '(4 - 5 Sets)',
-        reps: '(5 - 7 Reps)'
-    },
-    
-    strength: {
-        sets: '(4 -5 Sets)',
-        reps: '(8 - 12 Reps)'
-    }
-}
-
-
 
 // Create a scroll down and up function
 gym.scroll = () => {
@@ -154,17 +200,30 @@ gym.getResults = () => {
         //     // console.log(t);
             
             for (let i = 0; i < gym.workouts[muscle].length; i++) {
-                console.log(muscle);
-                const muscle = select
-                if (muscle === gym.workouts[select] && goal === gym.workouts[select][i].aim) {
+                    console.log(muscle);
+
+                if (muscle === gym.workouts[muscle] && goal === gym.workouts[muscle][i].aim) {
                     // gym.regime();
                     console.log('lets go');
+
+                    $('.contOne').text(`<h4 class="choice">${gym.workouts[muscle][i].exercises.exerciseOne}</h4>`)
+                    $('.contOne').text(`<p class="choice">${gym.workouts[muscle][i].sets}</p>`)
+                    $('.contOne').text(`<p class="choice">${gym.workouts[muscle][i].reps}</p>`)
+
+                    $('.contTwo').text(`<h4 class="choice">${gym.workouts[muscle][i].exercises.exerciseTwo}</h4>`)
+                    $('.contTwo').text(`<p class="choice">${gym.workouts[muscle][i].sets}</p>`)
+                    $('.contTwo').text(`<p class="choice">${gym.workouts[muscle][i].reps}</p>`)
+
+                    $('.contThree').text(`<h4 class="choice">${gym.workouts[muscle][i].exercises.exerciseThree}</h4>`)
+                    $('.contThree').text(`<p class="choice">${gym.workouts[muscle][i].sets}</p>`)
+                    $('.contThree').text(`<p class="choice">${gym.workouts[muscle][i].reps}</p>`)
 
                     // then display gym.workouts[t]muscle.exercise
                     // then display gym.workouts[t]muscle.setsReps
 
                 }
             }
+            console.log(gym.workouts[muscle]);
         // }
     });
 };
