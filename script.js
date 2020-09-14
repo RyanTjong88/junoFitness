@@ -24,13 +24,11 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: [
-                {
+            exercises: {
                     exerciseOne: 'Deadlifts',
                     exerciseTwo: 'Bent Over Rows',
                     exerciseThree: 'Lat Pulldowns',
-                }
-            ]
+            }
         },
     ],
 
@@ -54,13 +52,13 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: [
+            exercises: 
                 {
                     exerciseOne: 'Flat Bench',
                     exerciseTwo: 'Cable Flys',
                     exerciseThree: 'Decline Bench',
                 }
-            ]
+            
         },
     ],
     
@@ -84,13 +82,13 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: [
+            exercises: 
                 {
                     exerciseOne: 'Bicep Curls',
                     exerciseTwo: 'Skull Crushers',
                     exerciseThree: 'EZ Bar Curls',
                 }
-            ]
+            
         },
     ],
     
@@ -114,13 +112,13 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: [
+            exercises: 
                 {
                     exerciseOne: 'Squats',
                     exerciseTwo: 'Lunges',
                     exerciseThree: 'Leg Curls',
                 }
-            ]
+            
         },
     ],
     
@@ -144,13 +142,13 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: [
+            exercises: 
                 {
                     exerciseOne: 'Shoulder Press',
                     exerciseTwo: 'Lateral Raises',
                     exerciseThree: 'Rear Delt Flys',
                 }
-            ]
+            
         },
     ]    
 };
@@ -187,44 +185,32 @@ gym.getResults = () => {
 
         // Prevent the html from refreshing
         event.preventDefault();
-        // console.log('are we eveen submitting');
 
         // Save information from checked radio buttons into variables
         const muscle = $('input[name=muscle]:checked').val();
         const goal = $('input[name=goal]:checked').val();
         console.log(muscle, goal);
-        // gym.regime = () => {
-        // const results = [];  //[] is an empty array
-        
-        // for (let t = 0; t < gym.workouts.length; t++)  {
-        //     // console.log(t);
-            
-            for (let i = 0; i < gym.workouts[muscle].length; i++) {
-                    console.log(muscle);
 
-                if (muscle === gym.workouts[muscle] && goal === gym.workouts[muscle][i].aim) {
-                    // gym.regime();
-                    console.log('lets go');
+        for (const key in gym.workouts) {
+            // console.log(`${key}`);
+            // const key = muscle
+            // console.log(gym.workouts[key][2].aim);
 
-                    $('.contOne').text(`<h4 class="choice">${gym.workouts[muscle][i].exercises.exerciseOne}</h4>`)
-                    $('.contOne').text(`<p class="choice">${gym.workouts[muscle][i].sets}</p>`)
-                    $('.contOne').text(`<p class="choice">${gym.workouts[muscle][i].reps}</p>`)
+            for (let i = 0; i < gym.workouts[key].length; i++) {
+                // console.log(gym.workouts[key]);
+                if (muscle === key && goal === gym.workouts[key][i].aim){
+                    // console.log(gym.workouts[key][3]);
+                    // console.log('turtle');
 
-                    $('.contTwo').text(`<h4 class="choice">${gym.workouts[muscle][i].exercises.exerciseTwo}</h4>`)
-                    $('.contTwo').text(`<p class="choice">${gym.workouts[muscle][i].sets}</p>`)
-                    $('.contTwo').text(`<p class="choice">${gym.workouts[muscle][i].reps}</p>`)
+                    $('.contOne').html(`<h4 class="exercise">${gym.workouts[key][3].exercises.exerciseOne}</h4> <p class="set">${gym.workouts[key][i].sets}</p>, <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contThree').text(`<h4 class="choice">${gym.workouts[muscle][i].exercises.exerciseThree}</h4>`)
-                    $('.contThree').text(`<p class="choice">${gym.workouts[muscle][i].sets}</p>`)
-                    $('.contThree').text(`<p class="choice">${gym.workouts[muscle][i].reps}</p>`)
+                    $('.contTwo').html(`<h4 class="exercise">${gym.workouts[key][3].exercises.exerciseTwo}</h4> <p class="set">${gym.workouts[key][i].sets}</p>, <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    // then display gym.workouts[t]muscle.exercise
-                    // then display gym.workouts[t]muscle.setsReps
+                    $('.contThree').html(`<h4 class="exercise">${gym.workouts[key][3].exercises.exerciseThree}</h4> <p class="set">${gym.workouts[key][i].sets}</p>, <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
                 }
             }
-            console.log(gym.workouts[muscle]);
-        // }
+        }
     });
 };
 

@@ -45,7 +45,20 @@
 .resultSection {
     background-color: #ffb43b;
 
+    .resultsContainer {
+        display: flex;
+        flex-direction: column;
+        width: 58%;
+        margin-top: 50px;
+
+        .contOne {
+            display: flex;
+            flex-direction: column;
+        }
+    }   
+
     .up{
         margin-bottom: 50px;
     }
 }
+
