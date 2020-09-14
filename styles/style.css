@@ -336,6 +336,18 @@ input[type="submit"]:focus {
   font-size: 2.5rem;
 }
 
+footer {
+  background-color: #d8910d;
+  text-align: center;
+}
+
+footer p {
+  font: 400 1.8rem 'Anton', sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 10px;
+}
+
 header {
   background-color: #ffb43b;
 }
@@ -409,6 +421,7 @@ header {
 
 .resultSection {
   background-color: #ffb43b;
+  text-align: center;
 }
 
 .resultSection .resultsContainer {
@@ -419,11 +432,25 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 58%;
   margin-top: 50px;
 }
 
-.resultSection .resultsContainer .contOne {
+.resultSection .resultsContainer h4 {
+  font: 400 7rem 'Knewave', cursive;
+  text-shadow: #8a8a8a 5px 5px;
+  text-transform: capitalize;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.resultSection .resultsContainer .contOne,
+.resultSection .resultsContainer .contTwo,
+.resultSection .resultsContainer .contThree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -433,8 +460,24 @@ header {
           flex-direction: column;
 }
 
+.resultSection .resultsContainer .contOne h5,
+.resultSection .resultsContainer .contTwo h5,
+.resultSection .resultsContainer .contThree h5 {
+  font: 400 4rem 'Knewave', cursive;
+  text-shadow: #8a8a8a 5px 5px;
+  margin: 0;
+}
+
+.resultSection .resultsContainer .contOne p,
+.resultSection .resultsContainer .contTwo p,
+.resultSection .resultsContainer .contThree p {
+  font: 400 2.5rem 'Anton', sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
 .resultSection .up {
-  margin-bottom: 50px;
+  margin: 20px 0 50px;
 }
 
 /* Portrait tablet and small desktops */

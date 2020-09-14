@@ -25,9 +25,9 @@ gym.workouts = {
         },
         {
             exercises: {
-                    exerciseOne: 'Deadlifts',
-                    exerciseTwo: 'Bent Over Rows',
-                    exerciseThree: 'Lat Pulldowns',
+                exerciseOne: 'Deadlifts',
+                exerciseTwo: 'Bent Over Rows',
+                exerciseThree: 'Lat Pulldowns',
             }
         },
     ],
@@ -52,12 +52,11 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: 
-                {
-                    exerciseOne: 'Flat Bench',
-                    exerciseTwo: 'Cable Flys',
-                    exerciseThree: 'Decline Bench',
-                }
+            exercises: {
+                exerciseOne: 'Flat Bench',
+                exerciseTwo: 'Cable Flys',
+                exerciseThree: 'Decline Bench',
+            }
             
         },
     ],
@@ -82,12 +81,11 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: 
-                {
-                    exerciseOne: 'Bicep Curls',
-                    exerciseTwo: 'Skull Crushers',
-                    exerciseThree: 'EZ Bar Curls',
-                }
+            exercises: {
+                exerciseOne: 'Bicep Curls',
+                exerciseTwo: 'Skull Crushers',
+                exerciseThree: 'EZ Bar Curls',
+            }
             
         },
     ],
@@ -112,13 +110,11 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: 
-                {
-                    exerciseOne: 'Squats',
-                    exerciseTwo: 'Lunges',
-                    exerciseThree: 'Leg Curls',
-                }
-            
+            exercises: {
+                exerciseOne: 'Squats',
+                exerciseTwo: 'Lunges',
+                exerciseThree: 'Leg Curls',
+            }
         },
     ],
     
@@ -142,13 +138,11 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: 
-                {
-                    exerciseOne: 'Shoulder Press',
-                    exerciseTwo: 'Lateral Raises',
-                    exerciseThree: 'Rear Delt Flys',
-                }
-            
+            exercises: {
+                exerciseOne: 'Shoulder Press',
+                exerciseTwo: 'Lateral Raises',
+                exerciseThree: 'Rear Delt Flys',
+            }
         },
     ]    
 };
@@ -157,7 +151,9 @@ console.log(gym.workouts);
 
 // Create a scroll down and up function
 gym.scroll = () => {
+
     // scroll down/up code taken from Ahmad Yousef on codepen
+    
     $(".start").click(function() {
         $('html, body').animate({
             scrollTop: $("h3").offset().top
@@ -189,32 +185,33 @@ gym.getResults = () => {
         // Save information from checked radio buttons into variables
         const muscle = $('input[name=muscle]:checked').val();
         const goal = $('input[name=goal]:checked').val();
-        console.log(muscle, goal);
 
+        // Store workouts objects into a varibale
         for (const key in gym.workouts) {
-            // console.log(`${key}`);
-            // const key = muscle
-            // console.log(gym.workouts[key][2].aim);
 
+            // Cycle through the arrays index and save it in the variable [i]
             for (let i = 0; i < gym.workouts[key].length; i++) {
                 // console.log(gym.workouts[key]);
                 if (muscle === key && goal === gym.workouts[key][i].aim){
-                    // console.log(gym.workouts[key][3]);
-                    // console.log('turtle');
 
-                    $('.contOne').html(`<h4 class="exercise">${gym.workouts[key][3].exercises.exerciseOne}</h4> <p class="set">${gym.workouts[key][i].sets}</p>, <p class="rep">${gym.workouts[key][i].reps}</p>`)
+                    $('.contOne').html(`<h4>${key}</h4>
+                    <h5 class="exercise">${gym.workouts[key][3].exercises.exerciseOne}</h5>
+                    <p class="set">${gym.workouts[key][i].sets}</p> 
+                    <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contTwo').html(`<h4 class="exercise">${gym.workouts[key][3].exercises.exerciseTwo}</h4> <p class="set">${gym.workouts[key][i].sets}</p>, <p class="rep">${gym.workouts[key][i].reps}</p>`)
+                    $('.contTwo').html(`<h5 class="exercise">${gym.workouts[key][3].exercises.exerciseTwo}</h5> 
+                    <p class="set">${gym.workouts[key][i].sets}</p> 
+                    <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contThree').html(`<h4 class="exercise">${gym.workouts[key][3].exercises.exerciseThree}</h4> <p class="set">${gym.workouts[key][i].sets}</p>, <p class="rep">${gym.workouts[key][i].reps}</p>`)
+                    $('.contThree').html(`<h5 class="exercise">${gym.workouts[key][3].exercises.exerciseThree}</h5> 
+                    <p class="set">${gym.workouts[key][i].sets}</p>
+                    <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
                 }
             }
         }
     });
 };
-
-
 
 gym.init = () => {
     gym.scroll();

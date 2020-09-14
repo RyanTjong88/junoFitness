@@ -67,3 +67,15 @@ input[type="submit"] {
         font-size: 2.5rem;
     }
 }
+
+footer {
+    background-color: #d8910d;
+    text-align: center;
+
+    p {
+        font: 400 1.8rem 'Anton', sans-serif;
+        letter-spacing: 2px;
+        margin: 0;
+        padding: 10px; 
+    }
+}

@@ -42,23 +42,54 @@
     }
 }
 
+// Results Section
+
 .resultSection {
     background-color: #ffb43b;
+    text-align: center;
 
     .resultsContainer {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 58%;
         margin-top: 50px;
 
-        .contOne {
+        h4 {
+            font: 400 7rem 'Knewave', cursive;
+            text-shadow: #8a8a8a 5px 5px;
+            text-transform: capitalize;
+            text-decoration: underline;
+            letter-spacing: 2px;
+            margin: 0; 
+
+        }
+
+        .contOne,
+        .contTwo,
+        .contThree {
             display: flex;
             flex-direction: column;
+
+            // Elements appended to the DOM
+
+            h5 {
+                font: 400 4rem 'Knewave', cursive;
+                text-shadow: #8a8a8a 5px 5px;
+                margin: 0; 
+            }
+
+            p {
+                font: 400 2.5rem 'Anton', sans-serif;
+                letter-spacing: 2px;
+                margin: 0; 
+            }
         }
     }   
-
-    .up{
-        margin-bottom: 50px;
+        
+    .up {
+        margin: 20px 0 50px;
     }
+    
 }
 
