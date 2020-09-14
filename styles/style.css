@@ -482,4 +482,76 @@ header {
 
 /* Portrait tablet and small desktops */
 /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .headerContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mainContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .mainContainer form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contentContainer {
+    min-width: 100%;
+  }
+  .contentContainer fieldset div {
+    margin: 0;
+  }
+  .imageContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-width: 80%;
+  }
+  .results {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .headerContainer .imageContainer img,
+  .mainContainer .imageContainer img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .contentContainer {
+    text-align: center;
+  }
+  .contentContainer div {
+    text-align: center;
+  }
+  .contentContainer div .start {
+    width: 100%;
+  }
+  .contentContainer input[type="submit"] {
+    width: 100%;
+  }
+  .imageContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-width: 100%;
+  }
+  .up {
+    width: 100%;
+  }
+  .resultSection .resultsContainer h4 {
+    font: 1rem;
+  }
+  .resultSection .resultsContainer h5 {
+    font-size: 3rem;
+  }
+  .resultSection .resultsContainer p {
+    font-size: 1.5rem;
+  }
+}

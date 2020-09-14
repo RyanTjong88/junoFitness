@@ -162,8 +162,8 @@ gym.scroll = () => {
 
     $('input[type="submit"]').click(function() {
         $('html, body').animate({
-            scrollTop: $(".results").offset().top
-        }, 1500);
+            scrollTop: $(".resultsContainer").offset().top
+        }, 1800);
     });
 
     $(".up").click(function() {
@@ -199,11 +199,11 @@ gym.getResults = () => {
                     <p class="set">${gym.workouts[key][i].sets}</p> 
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contTwo').html(`<h5 class="exercise">${gym.workouts[key][3].exercises.exerciseTwo}</h5> 
+                    $('.contTwo').html(`<h5>${gym.workouts[key][3].exercises.exerciseTwo}</h5> 
                     <p class="set">${gym.workouts[key][i].sets}</p> 
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contThree').html(`<h5 class="exercise">${gym.workouts[key][3].exercises.exerciseThree}</h5> 
+                    $('.contThree').html(`<h5>${gym.workouts[key][3].exercises.exerciseThree}</h5> 
                     <p class="set">${gym.workouts[key][i].sets}</p>
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
 

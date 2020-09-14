@@ -7,9 +7,88 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 
-    // start to collages header image under h1 h2
+    .headerContainer {
+        justify-content: center;
+    }
+    .mainContainer {
+        justify-content: center;
+
+        form {
+            justify-content: center;
+        }
+    }
+
+    .contentContainer {
+        min-width: 100%;
+
+        fieldset {
+
+            div {
+                margin: 0;
+            }
+        }
+    }
+    
+    .imageContainer {
+        justify-content: center;
+        min-width: 80%;
+    }
+
+    .results {
+        justify-content: center;
+    }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+    .headerContainer .imageContainer img, 
+    .mainContainer .imageContainer img {
+        box-shadow: none;
+        }
+
+    .contentContainer {
+        text-align: center;
+
+        div {
+            text-align: center;
+            // header button
+            .start {
+                width: 100%;
+            }
+        }
+        // Input Submit
+        input[type="submit"] {
+            width: 100%;
+        }
+    }
+
+    .imageContainer {
+        justify-content: center;
+        min-width: 100%;
+
+        
+    }
+
+    .up {
+        width: 100%;
+    }
+
+    .resultSection {
+
+        .resultsContainer {
+            
+            h4 {
+                font: 1rem;
+            }
+            
+            h5 {
+                font-size: 3rem;
+            }
+            
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }   
 }
