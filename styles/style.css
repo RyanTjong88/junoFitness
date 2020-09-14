@@ -546,12 +546,16 @@ header {
     width: 100%;
   }
   .resultSection .resultsContainer h4 {
-    font: 1rem;
+    font-size: 5.5rem;
   }
-  .resultSection .resultsContainer h5 {
-    font-size: 3rem;
+  .resultSection .resultsContainer .contOne h5,
+  .resultSection .resultsContainer .contTwo h5,
+  .resultSection .resultsContainer .contThree h5 {
+    font-size: 3.5rem;
   }
-  .resultSection .resultsContainer p {
-    font-size: 1.5rem;
+  .resultSection .resultsContainer .contOne p,
+  .resultSection .resultsContainer .contTwo p,
+  .resultSection .resultsContainer .contThree p {
+    font-size: 2rem;
   }
 }
