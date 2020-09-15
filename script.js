@@ -241,7 +241,7 @@ gym.getResults = () => {
                     const exerciseFour = randomItem(exerciseArray); 
                     const exerciseFive = randomItem(exerciseArray); 
 
-                    // Display Muscle group and exercises for it to the page
+                    // Display Muscle group and exercises to the page
                     $('.contOne').html(`<h4>${key}</h4>
                     <h5 class="exercise">${[exerciseOne]}</h5>
                     <p class="set">${gym.workouts[key][i].sets}</p> 
