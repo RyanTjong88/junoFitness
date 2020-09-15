@@ -34,9 +34,34 @@
         min-width: 80%;
     }
 
-    .results {
-        justify-content: center;
-    }
+    .resultSection {
+
+        .results {
+            justify-content: center;
+
+            .resultsContainer {
+                margin-top: 0;
+                h4 {
+                    font-size: 5.5rem;
+                }
+                
+                .contOne,
+                .contTwo,
+                .contThree,
+                .contFour,
+                .contFive {
+
+                    h5 {
+                        font-size: 3.5rem;
+                    }
+                    
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }   
 }
 
 /* Landscape phones and down */
@@ -74,28 +99,28 @@
         width: 100%;
     }
 
-    .resultSection {
+    // .resultSection {
 
-        .resultsContainer {
-            margin-top: 0;
-            h4 {
-                font-size: 5.5rem;
-            }
+    //     .resultsContainer {
+    //         margin-top: 0;
+    //         h4 {
+    //             font-size: 5.5rem;
+    //         }
             
-            .contOne,
-            .contTwo,
-            .contThree,
-            .contFour,
-            .contFive {
+    //         .contOne,
+    //         .contTwo,
+    //         .contThree,
+    //         .contFour,
+    //         .contFive {
 
-                h5 {
-                    font-size: 3.5rem;
-                }
+    //             h5 {
+    //                 font-size: 3.5rem;
+    //             }
                 
-                p {
-                    font-size: 2rem;
-                }
-            }
-        }
-    }   
+    //             p {
+    //                 font-size: 2rem;
+    //             }
+    //         }
+    //     }
+    // }   
 }

@@ -74,10 +74,18 @@ footer {
     background-color: #d8910d;
     text-align: center;
 
+    a,
     p {
+        color: #2A150D;
         font: 400 1.8rem 'Anton', sans-serif;
         letter-spacing: 2px;
         margin: 0;
         padding: 10px; 
+        transition: font-size 1s;
+    }
+    
+    a:hover,
+    a:focus {
+        font-size: 2rem;
     }
 }

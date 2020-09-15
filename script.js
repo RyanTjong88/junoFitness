@@ -262,7 +262,7 @@ gym.getResults = () => {
                     $('.contFive').html(`<h5>${[exerciseFive]}</h5> 
                     <p class="set">${gym.workouts[key][i].sets}</p>
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
-
+                    
                 }
             }
         }            

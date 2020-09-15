@@ -341,11 +341,20 @@ footer {
   text-align: center;
 }
 
+footer a,
 footer p {
+  color: #2A150D;
   font: 400 1.8rem 'Anton', sans-serif;
   letter-spacing: 2px;
   margin: 0;
   padding: 10px;
+  -webkit-transition: font-size 1s;
+  transition: font-size 1s;
+}
+
+footer a:hover,
+footer a:focus {
+  font-size: 2rem;
 }
 
 header {
@@ -516,10 +525,30 @@ header {
             justify-content: center;
     min-width: 80%;
   }
-  .results {
+  .resultSection .results {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .resultSection .results .resultsContainer {
+    margin-top: 0;
+  }
+  .resultSection .results .resultsContainer h4 {
+    font-size: 5.5rem;
+  }
+  .resultSection .results .resultsContainer .contOne h5,
+  .resultSection .results .resultsContainer .contTwo h5,
+  .resultSection .results .resultsContainer .contThree h5,
+  .resultSection .results .resultsContainer .contFour h5,
+  .resultSection .results .resultsContainer .contFive h5 {
+    font-size: 3.5rem;
+  }
+  .resultSection .results .resultsContainer .contOne p,
+  .resultSection .results .resultsContainer .contTwo p,
+  .resultSection .results .resultsContainer .contThree p,
+  .resultSection .results .resultsContainer .contFour p,
+  .resultSection .results .resultsContainer .contFive p {
+    font-size: 2rem;
   }
 }
 
@@ -550,25 +579,5 @@ header {
   }
   .up {
     width: 100%;
-  }
-  .resultSection .resultsContainer {
-    margin-top: 0;
-  }
-  .resultSection .resultsContainer h4 {
-    font-size: 5.5rem;
-  }
-  .resultSection .resultsContainer .contOne h5,
-  .resultSection .resultsContainer .contTwo h5,
-  .resultSection .resultsContainer .contThree h5,
-  .resultSection .resultsContainer .contFour h5,
-  .resultSection .resultsContainer .contFive h5 {
-    font-size: 3.5rem;
-  }
-  .resultSection .resultsContainer .contOne p,
-  .resultSection .resultsContainer .contTwo p,
-  .resultSection .resultsContainer .contThree p,
-  .resultSection .resultsContainer .contFour p,
-  .resultSection .resultsContainer .contFive p {
-    font-size: 2rem;
   }
 }
