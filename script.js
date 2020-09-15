@@ -1,7 +1,5 @@
 const gym = {}
 
-// create back, chest, etc array
-
 gym.workouts = {
     
     back: [
@@ -24,11 +22,18 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: {
-                exerciseOne: 'Deadlifts',
-                exerciseTwo: 'Bent Over Rows',
-                exerciseThree: 'Lat Pulldowns',
-            }
+            exercises: [
+                'Deadlifts',
+                'Bent Over Rows',
+                'Lat Pulldowns',
+                'Pull-Ups',
+                'Cable Rows',
+                'Lying Lateral Raise',
+                'Seated Cable Row',
+                'Good Mornings',
+                'Pullovers',
+                'Shrugs'
+            ]
         },
     ],
 
@@ -52,11 +57,18 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: {
-                exerciseOne: 'Flat Bench',
-                exerciseTwo: 'Cable Flys',
-                exerciseThree: 'Decline Bench',
-            }
+            exercises: [
+                'Flat Bench',
+                'Cable Flys',
+                'Decline Bench',
+                'Incline Bench',
+                'Peck Deck Flys',
+                'Pullovers',
+                'Push-Ups',
+                'Incline Flys',
+                'Machine Presses',
+                'Dips'
+            ]
             
         },
     ],
@@ -81,12 +93,18 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: {
-                exerciseOne: 'Bicep Curls',
-                exerciseTwo: 'Skull Crushers',
-                exerciseThree: 'EZ Bar Curls',
-            }
-            
+            exercises: [
+                'Skull Crushers',
+                'EZ Bar Curls',
+                'Reverse Curls',
+                'Dips',
+                'Push-Downs',
+                'Tricep Kickbacks',
+                'Seated Cable Row',
+                'Rope Extension',
+                'Preacher Curls',
+                'Hammer Curls'
+            ]
         },
     ],
     
@@ -110,11 +128,18 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: {
-                exerciseOne: 'Squats',
-                exerciseTwo: 'Lunges',
-                exerciseThree: 'Leg Curls',
-            }
+            exercises: [
+                'Squats',
+                'Lunges',
+                'Leg Curls',
+                'Leg Extensions',
+                'Calf Raises',
+                'Hack Squats',
+                'Hip Abductions',
+                'Seated Adductions',
+                'Straight Leg Deadlifts',
+                'Hip Thrusts'
+            ]
         },
     ],
     
@@ -138,16 +163,21 @@ gym.workouts = {
             reps: '(10 - 15 Reps)',
         },
         {
-            exercises: {
-                exerciseOne: 'Shoulder Press',
-                exerciseTwo: 'Lateral Raises',
-                exerciseThree: 'Rear Delt Flys',
-            }
+            exercises: [
+                'Shoulder Press',
+                'Lateral Raises',
+                'Rear Delt Flys',
+                'Arnold Presses',
+                'Front Arm Raises',
+                'Lying Lateral Raise',
+                'Military Press',
+                'Upright Rows',
+                'T-Bar Rows',
+                'Rear Deltoid Laterals'
+            ]
         },
     ]    
 };
-
-console.log(gym.workouts);
 
 // Create a scroll down and up function
 gym.scroll = () => {
@@ -176,11 +206,18 @@ gym.scroll = () => {
 // Create an event listener for a 'submit' event
 gym.getResults = () => {
 
-
+    // Declare a random item that will return a random item from any array
     $('form').on('submit', function(event) {
 
         // Prevent the html from refreshing
         event.preventDefault();
+
+        function randomItem(array) {
+
+            // Generate random number withihn the range of indexes in my array
+            const randomIndex = Math.floor(Math.random() * array.length);
+            return array[randomIndex];
+        }
 
         // Save information from checked radio buttons into variables
         const muscle = $('input[name=muscle]:checked').val();
@@ -191,25 +228,44 @@ gym.getResults = () => {
 
             // Cycle through the arrays index and save it in the variable [i]
             for (let i = 0; i < gym.workouts[key].length; i++) {
-                // console.log(gym.workouts[key]);
+
+                // If selected muscle matches [key] and selected goal matches the aim key in that object 
                 if (muscle === key && goal === gym.workouts[key][i].aim){
 
+                    const exerciseArray = gym.workouts[key][3].exercises
+
+                    // Get a random exercise for every const
+                    const exerciseOne = randomItem(exerciseArray); 
+                    const exerciseTwo = randomItem(exerciseArray); 
+                    const exerciseThree = randomItem(exerciseArray); 
+                    const exerciseFour = randomItem(exerciseArray); 
+                    const exerciseFive = randomItem(exerciseArray); 
+
+                    // Display Muscle group and exercises for it to the page
                     $('.contOne').html(`<h4>${key}</h4>
-                    <h5 class="exercise">${gym.workouts[key][3].exercises.exerciseOne}</h5>
+                    <h5 class="exercise">${[exerciseOne]}</h5>
                     <p class="set">${gym.workouts[key][i].sets}</p> 
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contTwo').html(`<h5>${gym.workouts[key][3].exercises.exerciseTwo}</h5> 
+                    $('.contTwo').html(`<h5>${[exerciseTwo]}</h5> 
                     <p class="set">${gym.workouts[key][i].sets}</p> 
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
-                    $('.contThree').html(`<h5>${gym.workouts[key][3].exercises.exerciseThree}</h5> 
+                    $('.contThree').html(`<h5>${[exerciseThree]}</h5> 
+                    <p class="set">${gym.workouts[key][i].sets}</p>
+                    <p class="rep">${gym.workouts[key][i].reps}</p>`)
+
+                    $('.contFour').html(`<h5>${[exerciseFour]}</h5> 
+                    <p class="set">${gym.workouts[key][i].sets}</p>
+                    <p class="rep">${gym.workouts[key][i].reps}</p>`)
+
+                    $('.contFive').html(`<h5>${[exerciseFive]}</h5> 
                     <p class="set">${gym.workouts[key][i].sets}</p>
                     <p class="rep">${gym.workouts[key][i].reps}</p>`)
 
                 }
             }
-        }
+        }            
     });
 };
 
@@ -221,8 +277,3 @@ gym.init = () => {
 $(document).ready(function() {
     gym.init();
 });
-
-
-
-
-

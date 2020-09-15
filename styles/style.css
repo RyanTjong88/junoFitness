@@ -450,7 +450,9 @@ header {
 
 .resultSection .resultsContainer .contOne,
 .resultSection .resultsContainer .contTwo,
-.resultSection .resultsContainer .contThree {
+.resultSection .resultsContainer .contThree,
+.resultSection .resultsContainer .contFour,
+.resultSection .resultsContainer .contFive {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +464,9 @@ header {
 
 .resultSection .resultsContainer .contOne h5,
 .resultSection .resultsContainer .contTwo h5,
-.resultSection .resultsContainer .contThree h5 {
+.resultSection .resultsContainer .contThree h5,
+.resultSection .resultsContainer .contFour h5,
+.resultSection .resultsContainer .contFive h5 {
   font: 400 4rem 'Knewave', cursive;
   text-shadow: #8a8a8a 5px 5px;
   margin: 0;
@@ -470,7 +474,9 @@ header {
 
 .resultSection .resultsContainer .contOne p,
 .resultSection .resultsContainer .contTwo p,
-.resultSection .resultsContainer .contThree p {
+.resultSection .resultsContainer .contThree p,
+.resultSection .resultsContainer .contFour p,
+.resultSection .resultsContainer .contFive p {
   font: 400 2.5rem 'Anton', sans-serif;
   letter-spacing: 2px;
   margin: 0;
@@ -545,17 +551,24 @@ header {
   .up {
     width: 100%;
   }
+  .resultSection .resultsContainer {
+    margin-top: 0;
+  }
   .resultSection .resultsContainer h4 {
     font-size: 5.5rem;
   }
   .resultSection .resultsContainer .contOne h5,
   .resultSection .resultsContainer .contTwo h5,
-  .resultSection .resultsContainer .contThree h5 {
+  .resultSection .resultsContainer .contThree h5,
+  .resultSection .resultsContainer .contFour h5,
+  .resultSection .resultsContainer .contFive h5 {
     font-size: 3.5rem;
   }
   .resultSection .resultsContainer .contOne p,
   .resultSection .resultsContainer .contTwo p,
-  .resultSection .resultsContainer .contThree p {
+  .resultSection .resultsContainer .contThree p,
+  .resultSection .resultsContainer .contFour p,
+  .resultSection .resultsContainer .contFive p {
     font-size: 2rem;
   }
 }
